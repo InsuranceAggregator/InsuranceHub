@@ -1,0 +1,90 @@
+DataBase Design:
+----------------------
+Requirements Gathered 
+Conceptual design     
+Logil design          
+physical design       
+----------------------
+
+Requirements Gathered for Database Design:
+Entities:
+
+Users
+InsuranceProviders
+InsurancePolicies
+Quotes
+Claims
+Relationships:
+
+One-to-Many relationship between Users and UserPolicies
+One-to-Many relationship between InsuranceProviders and InsurancePolicies
+One-to-Many relationship between Users and Quotes
+One-to-Many relationship between Users and Claims
+Attributes:
+
+Users:
+UserID, Username, Email, Phone, Address, ...
+InsuranceProviders:
+ProviderID, ProviderName, ContactInfo, Address, Description, ...
+InsurancePolicies:
+PolicyID, ProviderID (Foreign Key), PolicyType, CoverageDetails, PremiumAmount, ...
+Quotes:
+QuoteID, UserID (Foreign Key), PolicyID (Foreign Key), QuoteAmount, ...
+Claims:
+ClaimID, UserID (Foreign Key), UserPolicyID (Foreign Key), ClaimDate, ClaimAmount, ...
+Constraints:
+
+Primary keys for each entity (UserID, ProviderID, PolicyID, QuoteID, ClaimID)
+Foreign key constraints for relationships
+____________________________________________________________________________________________________
+
+
+Conceptual design: 
+
+
+Entities:
+- Users (UserID, Username, Email, Phone, Address, ...)
+- InsuranceProviders (ProviderID, ProviderName, ContactInfo, Address, Description, ...)
+- InsurancePolicies (PolicyID, ProviderID (FK), PolicyType, CoverageDetails, PremiumAmount, ...)
+- Quotes (QuoteID, UserID (FK), PolicyID (FK), QuoteAmount, ...)
+- Claims (ClaimID, UserID (FK), UserPolicyID (FK), ClaimDate, ClaimAmount, ...)
+
+Relationships:
+- Users (1) ---- (*) UserPolicies
+- InsuranceProviders (1) ---- (*) InsurancePolicies
+- Users (1) ---- (*) Quotes
+- Users (1) ---- (*) Claims
+
+_______________________________________________________________________________________________________
+
+Logical design:
+
+Entities:
+- Users (UserID, Username, Email, Phone, Address, ...)
+- InsuranceProviders (ProviderID, ProviderName, ContactInfo, Address, Description, ...)
+- InsurancePolicies (PolicyID, ProviderID (FK), PolicyType, CoverageDetails, PremiumAmount, ...)
+- Quotes (QuoteID, UserID (FK), PolicyID (FK), QuoteAmount, ...)
+- Claims (ClaimID, UserID (FK), UserPolicyID (FK), ClaimDate, ClaimAmount, ...)
+
+Relationships:
+- Users (1) ---- (*) UserPolicies
+- InsuranceProviders (1) ---- (*) InsurancePolicies
+- Users (1) ---- (*) Quotes
+- Users (1) ---- (*) Claims
+
+
+__________________________________________________________________________________________________________
+
+Physical design :
+
+Tables:
+- Users (UserID, Username, Email, Phone, Address, ...)
+- InsuranceProviders (ProviderID, ProviderName, ContactInfo, Address, Description, ...)
+- InsurancePolicies (PolicyID, ProviderID (FK), PolicyType, CoverageDetails, PremiumAmount, ...)
+- Quotes (QuoteID, UserID (FK), PolicyID (FK), QuoteAmount, ...)
+- Claims (ClaimID, UserID (FK), UserPolicyID (FK), ClaimDate, ClaimAmount, ...)
+
+Constraints:
+- Primary Key for each table
+- Foreign Key constraints for relationships
+- Indexes on frequently queried columns
