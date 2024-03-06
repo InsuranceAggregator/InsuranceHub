@@ -1,0 +1,78 @@
+1)Users Table:
+
+user_id (Primary Key)
+username
+email
+password_hash
+other relevant user information (e.g., name, address, contact info)
+
+2)Insurance Companies Table:
+
+company_id (Primary Key)
+company_name
+company_description
+other relevant company information (e.g., address, contact info)
+
+3)Insurance Policies Table:
+
+policy_id (Primary Key)
+policy_name
+company_id (Foreign Key referencing Insurance Companies Table)
+policy_type
+coverage_details
+premium_amount
+start_date
+end_date
+renewal_terms
+cancellation_policy
+additional_features
+other relevant policy information
+
+4)User Policies Table (to store policies purchased by users):
+
+user_policy_id (Primary Key)
+user_id (Foreign Key referencing Users Table)
+policy_id (Foreign Key referencing Insurance Policies Table)
+purchase_date
+renewal_date
+premium_amount_paid
+other relevant information
+
+5)Quotes Table (to store quotes generated for users):
+
+quote_id (Primary Key)
+user_id (Foreign Key referencing Users Table)
+policy_id (Foreign Key referencing Insurance Policies Table)
+quote_amount
+quote_date
+other relevant quote information
+
+6)Claim Requests Table (to store insurance claims submitted by users):
+
+claim_id (Primary Key)
+user_policy_id (Foreign Key referencing User Policies Table)
+claim_date
+claim_description
+status (e.g., pending, approved, denied)
+other relevant claim information
+
+7)Payments Table:
+
+payment_id (Primary Key)
+user_policy_id (Foreign Key referencing User Policies Table)
+payment_date
+amount
+payment_method
+transaction_details
+other relevant payment information
+
+8)Customer Support Interactions Table:
+interaction_id (Primary Key)
+user_id (Foreign Key referencing Users Table)
+agent_id (Foreign Key referencing Users Table, representing the support agent)
+interaction_date
+interaction_type (e.g., phone call, email, chat)
+interaction_description
+status (e.g., open, closed)
+resolution_details
+other relevant interaction information
