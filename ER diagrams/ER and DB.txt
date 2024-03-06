@@ -1,0 +1,93 @@
+  
+     Entity-Relationship (ER) Diagram:   
+
+     +-----------------+       +---------------------+      +-------------------+
+     |      Users      |       |  InsuranceProviders |      |  InsurancePolicies|
+     +-----------------+       +---------------------+      +-------------------+
+     |   UserID (PK)   |       |  ProviderID (PK)     |      | PolicyID (PK)     |
+     |   Name          |       |  Name               |      | PolicyName        |
+     |   Email         |       |  ContactInfo        |      | CoverageDetails   |
+     |   Password      |       |  Address            |      | Premium           |
+     |   Address       |       |  TypesOfInsurance   |      | Deductible        |
+     |   PhoneNumber   |       +---------------------+      | CoverageLimits    |
+     |   DateOfBirth   |                                   +-------------------+
+     +-----------------+       
+           | 1                               N
+           |
+           |
+           |
+     +----------------+
+     |    Quotes      |
+     +----------------+
+     | QuoteID (PK)   |
+     | UserID (FK)    |
+     | ProviderID (FK)|
+     | PolicyID (FK)  |
+     | QuoteDetails   |
+     | DateGenerated  |
+     +----------------+
+                |
+                | 1                           N
+                |
+                |
+                |
+     +----------------+
+     |    Claims      |
+     +----------------+
+     | ClaimID (PK)   |
+     | UserID (FK)    |
+     | PolicyID (FK)  |
+     | ClaimDetails   |
+     | Status         |
+     +----------------+
+
+
+     Database Diagram:
+
+ +-----------------+       +---------------------+      +-------------------+
+|      Users      |       |  InsuranceProviders |      |  InsurancePolicies|
++-----------------+       +---------------------+      +-------------------+
+|   UserID (PK)   |       |  ProviderID (PK)     |      | PolicyID (PK)     |
+|   Name          |       |  Name               |      | PolicyName        |
+|   Email         |       |  ContactInfo        |      | CoverageDetails   |
+|   Password      |       |  Address            |      | Premium           |
+|   Address       |       |  TypesOfInsurance   |      | Deductible        |
+|   PhoneNumber   |       +---------------------+      | CoverageLimits    |
+|   DateOfBirth   |                                   +-------------------+
++-----------------+       
+       | 1                           N
+       |
+       |
+       |
++----------------+
+|    Quotes      |
++----------------+
+| QuoteID (PK)   |
+| UserID (FK)    |
+| ProviderID (FK)|
+| PolicyID (FK)  |
+| QuoteDetails   |
+| DateGenerated  |
++----------------+
+           |
+           | 1                           N
+           |
+           |
+           |
++----------------+
+|    Claims      |
++----------------+
+| ClaimID (PK)   |
+| UserID (FK)    |
+| PolicyID (FK)  |
+| ClaimDetails   |
+| Status         |
++----------------+
+
+
+
+
+
+
+
+ 
