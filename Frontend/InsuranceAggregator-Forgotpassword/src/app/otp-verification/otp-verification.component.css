@@ -1,0 +1,53 @@
+/* otp-verification.component.css */
+
+/* Container styling */
+.otp-verification-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Heading styling */
+.otp-verification-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form styling */
+.otp-verification-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.otp-verification-container label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Input styling */
+.otp-verification-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styling */
+.otp-verification-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.otp-verification-container button:hover {
+    background-color: #0056b3;
+}
