@@ -1,0 +1,85 @@
+.background-image {
+  background-image: url('src/assets/img 8.jpeg');
+  background-size: cover;
+  background-position: right;
+  margin: 0;
+  padding: 1px;
+  height: 100vh;
+  margin: bottom 100px;
+  
+}
+
+.login-container {
+  color: #007bff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 2px;
+  margin-left: 50px;
+  margin-top: 80px;
+  border-color: #0004ff;
+  background-color:Antiquewhite(175, 238, 202);
+  border: 2px solid #0a0007e1;
+  
+ }
+  h2{
+    text-align: center;
+    margin:10px auto;
+  }  
+.form-group {
+  margin-bottom: 20px;
+  
+}
+ 
+.btn-primary {
+  background-color: #0004ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+.btn-primary:hover {
+  
+  background-color: #0056b3;
+}
+ 
+a {
+  text-align: end;
+  color: #007bff;
+  text-decoration: none;
+}
+ 
+a:hover {
+  text-decoration: underline;
+}
+ 
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+.container
+{      
+display: flex;      
+justify-content: center;      
+align-items: center;      
+height:5vh;
+ }
+ .login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #020a06d2;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+ 
+ 
+ 
