@@ -1,0 +1,25 @@
+<div class="container">
+ <div class="form-container">
+        <h2 class="form-title">Post New Vehicle Data</h2>
+       <form [formGroup]="postVehicledataForm">
+     <div class="form-group">
+     <label for="policyNumber">policyNumber:</label>
+     <input type="text" id="policyNumber" name="policyNumber" required formControlName="policyNumber">
+     </div>
+     <div class="form-group">
+     <label for="vehicleType">vehicleType:</label>
+     <input type="text" id="vehicleType" name="vehicleType" required formControlName="vehicleType">
+     </div>
+     <div class="form-group">
+     <label for="vehicleRegistrationNumber">vehicleRegistrationNumber: </label>
+     <input type="text" id="vehicleRegistrationNumber" name="vehicleRegistrationNumber" required formControlName="vehicleRegistrationNumber">
+     </div>
+<div class="form-group">
+             <label for="vehicleModel">vehicleModel: </label>    
+        <input type="text" id="vehicleModel" name="vehicleModel" required formControlName="vehicleModel">
+        </div>
+    <button type="submit" (click)="postVehicledata()">Post</button>
+    </form>  
+    </div>
+    </div>
+  
