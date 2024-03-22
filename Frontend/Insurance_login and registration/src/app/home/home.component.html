@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="content">
+        <div class="left">
+            <img src="home-insurance-image.jpg" alt="Home Insurance Image">
+        </div>
+        <div class="right">
+            <h2> Home Insurance</h2>
+            <p>
+                Home insurance provides financial protection against disasters. A standard policy insures the home itself and the things you keep in it.
+                It typically covers damage to your home and belongings due to theft, fire, lightning, smoke, frozen pipes, ice, snow, and more.
+            </p>
+        </div>
+    </div>
+    <div class="insurance-list" *ngIf="insuranceData">
+        <h2>Insurance Policies</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Policy Number</th>
+                    <th>Type</th>
+                    <th>Premium</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let insurance of insuranceData">
+                    <td>{{ insurance.id }}</td>
+                    <td>{{ insurance.policyNumber }}</td>
+                    <td>{{ insurance.type }}</td>
+                    <td>{{ insurance.premium }}</td>
+                    <td>{{ insurance.status }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

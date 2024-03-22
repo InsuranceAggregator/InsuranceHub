@@ -1,0 +1,60 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ 
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+ 
+.left img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+ 
+.right {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+ 
+.right h2 {
+    color: #333;
+}
+ 
+.right p {
+    color: #666;
+    line-height: 1.6;
+}
+ 
+.insurance-list {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+ 
+table th {
+    background-color: #f2f2f2;
+}
