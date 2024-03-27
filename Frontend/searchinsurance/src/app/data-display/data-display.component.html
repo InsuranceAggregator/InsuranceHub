@@ -1,0 +1,24 @@
+
+<input type="text" [(ngModel)]="searchPolicyName" placeholder="Enter Policy Name">
+<button (click)="searchDataByPolicyName()">Search</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>Policy Number</th>
+            <th>Policy Name</th>
+            <th>Description</th>
+            <th>Policy Type</th>
+            <th>Premium</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="data">
+        <tr *ngFor="let item of data">
+            <td>{{ item.policyNumber }}</td>
+            <td>{{ item.policyName }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.policyType }}</td>
+            <td>{{ item.premium }}</td>
+        </tr>
+    </tbody>
+</table>
