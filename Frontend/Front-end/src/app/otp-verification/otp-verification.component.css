@@ -1,0 +1,63 @@
+/* Background image container */
+.background-container {
+    background-image: url('../../assets/images/InsuranceBG.png'); /* Specify the path to your background image */
+    background-size: cover;
+    background-position: center;
+    inline-size: 100%;
+    block-size: 100vh; /* Adjust height as needed */
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: -1;
+  }
+ 
+  /* OTP verification container */
+  .otp-verification-container {
+    max-inline-size: 400px;
+    margin: auto; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the container background */
+    position: absolute;
+    inset-block-start: 50%; /* Position from top 50% */
+    transform: translateY(-50%); /* Center vertically */
+    inset-inline-start: 20px; /* Adjust the left position as needed */
+    inset-inline-end: 20px; /* Adjust the right position as needed */
+    margin-inline-start: auto; /* Reset margin to auto for horizontal centering */
+    margin-inline-end: auto; /* Reset margin to auto for horizontal centering */
+    z-index: 1;
+  }
+ 
+  /* Form elements styling */
+  .otp-verification-container h2 {
+    margin-block-end: 20px;
+    color: #333;
+  }
+ 
+  .otp-verification-container label {
+    display: block;
+    margin-block-end: 5px;
+    font-weight: bold;
+  }
+ 
+  .otp-verification-container input,
+  .otp-verification-container button {
+    inline-size: calc(100% - 20px); /* Subtract padding */
+    padding: 8px;
+    margin-block-end: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+ 
+  .otp-verification-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+ 
+  .otp-verification-container button:hover {
+    background-color: #0056b3;
+  }

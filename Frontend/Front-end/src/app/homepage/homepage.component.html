@@ -1,0 +1,67 @@
+<div class="home-container">
+  <div class="header">
+    <div>
+      <!-- Logo link here -->
+     <a class="logo-link" [routerLink]="['/homepage']">
+       <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+     </a>
+     </div>
+    <div class="dropdown">
+      <button class="profile-btn">Profile</button>
+      <div class="dropdown-content">
+        <!-- Profile dropdown content here -->
+       
+        <a routerLink="/edit-profile">View & Edit Profile</a>
+        <a href="#">Notifications</a>
+        <a href="#">Sign out</a>
+        <!-- Add more options as needed -->
+      </div>
+    </div>
+    <div class="search-bar">
+      <form action="/data-display" method="GET">
+         <button (click)="navigateToDataDisplay()">Search</button>
+      </form>
+    </div>
+   
+    <div class="actions">
+      <div class="dropdown">
+        <button class="dropbtn">Policies</button>
+        <div class="dropdown-content">      
+          <div class="nested-dropdown">
+            <a>Home Insurance</a>
+            <div class="nested-content">
+                <nav>
+                  <a (click)="navigateToHomebuy1()">HomeGuard Secure</a>
+                  <a (click)="navigateToHomebuy2()">RentersGuard</a>
+                </nav>
+            </div>
+        </div>
+        <div class="nested-dropdown">
+          <a>Vehicle Insurance</a>
+          <div class="nested-content">
+             <a (click)="navigateToVehiclebuy1()">DriveSafe Premier</a>
+             <a (click)="navigateToVehiclebuy2()">Motorcycle Shield</a>
+         </div>
+     </div>
+      </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Claims</button>
+        <div class="dropdown-content">
+          <a href="#">File a new claim</a>
+          <a href="#">Existing filed claim</a>
+          <a href="#">Track the filed claim</a>          
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" (click)="navigateTocontactus()">Support</button>
+      </div>
+    </div>
+  </div>
+  <h1>We provide you the best Insurance</h1>
+  <h2>Secure the future, protect what's important</h2>
+ 
+  <footer>
+    <p>&copy; 2024 InsuraNexus. All rights reserved.</p>
+  </footer>
+</div>

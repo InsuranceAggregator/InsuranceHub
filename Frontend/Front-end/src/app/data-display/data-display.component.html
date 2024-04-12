@@ -1,0 +1,36 @@
+<!-- data-display.component.html -->
+<div class="search-bar">
+    <input type="text" [(ngModel)]="searchPolicyName" placeholder="Search Policies">
+    <button class="search-button" (click)="searchDataByPolicyName()">Search</button>
+    </div>
+     
+    <div class="search-results" *ngIf="filteredData.length > 0">
+    <table>
+    <thead>
+    <tr>
+    <th>Policy ID</th>
+    <th>Policy Name</th>
+    <th>Description</th>
+    <th>Policy Type</th>
+    <th>Premium/year</th>
+    <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of filteredData">
+        <td>{{ item.id }}</td>
+    <td>{{ item.policyName }}</td>
+    <td>{{ item.description }}</td>
+    <td>{{ item.policyType }}</td>
+    <td>{{ item.premium }}</td>
+    <td><button (click)="buyPolicy(item.id)">Buy</button></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+     
+    <div *ngIf="filteredData.length === 0 && searchPolicyName">
+    <p>No policies found.</p>
+    </div>
+     
+   

@@ -1,0 +1,59 @@
+.policy-container {     
+  background-color: antiquewhite !important; }
+h2 {
+  text-align: center;
+  color:blue;
+  margin-bottom: 20px ;
+}
+.policy-name {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size:20px ;
+}
+.policy-details {
+  width: 80%; /* Adjust width as needed */
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+ 
+  
+}
+.description {
+  margin-bottom: 20px;
+  text-align: justify; 
+}
+h3 {
+  font-size:20px ;
+}
+.policy-type {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.premium-amount {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.benefits {
+  margin-bottom: 10px;
+}
+
+
+.accept-and-proceed {
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.accept-and-proceed button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+.accept-and-proceed button:hover {
+  background-color: darkblue;
+}
