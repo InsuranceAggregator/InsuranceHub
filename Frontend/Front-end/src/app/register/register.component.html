@@ -1,0 +1,79 @@
+<!-- register.component.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Page</title>
+<link rel="stylesheet" href="register.component.css">
+</head>
+<body>
+<div class="background-image">
+<div class="container">
+<h2>Register</h2>
+<form #registerForm="ngForm" (ngSubmit)="register()">
+    <!-- For Name Field -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" pattern="[a-zA-Z]+.[a-zA-Z\s]+" maxlength="32" name="name"
+             placeholder="Enter your Name" required [(ngModel)]="form.name" #name="ngModel">
+      <div class="error" *ngIf="submitted && name.invalid ">
+        <div *ngIf="name.errors?.['required']">Name is required</div>
+        <div *ngIf="name.errors?.['pattern']">Please enter alphabets only and It must contain a minimum of 3 letters</div>
+      </div>
+    </div>
+ 
+    <!-- For Mobile Number Field -->
+    <div class="form-group">
+      <label for="mobilenumber">Mobile Number</label>
+      <input type="tel" id="mobilenumber" pattern="[6-9]{1}[0-9]{9}" name="mobilenumber" placeholder="Enter Mobile Number"
+             required [(ngModel)]="form.mobilenumber" #mobilenumber="ngModel">
+      <div class="error" *ngIf="submitted && mobilenumber.invalid">
+        <div *ngIf="mobilenumber.errors?.['required']">Mobile Number is required</div>
+        <div *ngIf="mobilenumber.errors?.['pattern']">Mobile Number begins with [6-9] only and it must be at least 10 digits</div>
+      </div>
+    </div>
+ 
+    <!-- For Email Field -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email"
+             placeholder="Enter your email" required [(ngModel)]="form.email" #email="ngModel">
+      <div class="error" *ngIf="submitted && email.invalid">
+        <div *ngIf="email.errors?.['required']">Email is required</div>
+        <div *ngIf="email.errors?.['pattern']">Invalid email format</div>
+      </div>
+    </div>
+ 
+    <!-- For Password Field -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password"
+             placeholder="Enter Password" required [(ngModel)]="form.password" #password="ngModel">
+      <div class="error" *ngIf="submitted && password.invalid">
+        <div *ngIf="password.errors?.['required']">Password is required</div>
+        <div *ngIf="password.errors?.['pattern']">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</div>
+      </div>
+    </div>
+ 
+    <!-- For Confirm Password Field -->
+    <div class="form-group">
+      <label for="confirmpassword">Confirm Password</label>
+      <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Enter Confirm Password"
+             required [(ngModel)]="form.confirmpassword" #confirmpassword="ngModel">
+      <div class="error" *ngIf="submitted && confirmpassword.invalid">
+        <div *ngIf="confirmpassword.errors?.['required']">Please confirm your password</div>
+      </div>
+    </div>
+ 
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+ 
+<div class="login-link">
+<p>Already have an account?  <a [routerLink]="['/login']">Login</a></p>
+</div>
+</div>
+</div>
+</body>
+</html>

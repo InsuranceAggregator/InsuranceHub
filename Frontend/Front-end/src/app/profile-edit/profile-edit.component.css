@@ -1,0 +1,90 @@
+/* Ensure the body and HTML elements take up the full viewport height */
+html, body {
+  block-size: 100%;
+  margin: 0;
+}
+.background-image-container {
+    background-image: url('../../assets/InsuranceBG.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: -1; /* Ensure the background image stays behind the content */
+  }
+  .header {
+    background-color: lilac;
+    padding: 10px;
+    display: flex;
+    align-items: baseline; /* Align items based on their baseline */
+  }
+ 
+  .logo-link {
+    margin-inline-end: auto; /* Pushes the logo to the left corner */
+  }
+ 
+  /* Adjust the size of the logo */
+  .logo-link img {
+   
+    inline-size: 50px;
+    block-size: auto;
+  }
+ 
+  .heading {
+    color: #138496; /* Change 'blue' to the color of your choice */
+  }
+ 
+  .profile-edit-container {
+    padding: 8px;
+    border-radius: 15px; /* Add curves at the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    max-inline-size: 80%; /* Adjust the max-width as needed */
+    margin: 0 20%; /* Add a 20% margin on both left and right sides */
+    background-color: #f0f0f0; /* Light color of your choice */
+    align-items: center; /* Center vertically */
+  }
+ 
+  /* Adjust label alignment and add margin-bottom for better spacing */
+  .profile-edit-container label {
+    font-size: 16px;
+    margin-block-end: 8px; /* Add spacing between label and input */
+    color: #09090c; /* Label color similar to the header background */
+    font-weight: bold;
+  }
+ 
+  /* Adjust input width and add margin-bottom for better spacing */
+  .profile-edit-container input[type="text"],
+  .profile-edit-container input[type="email"],
+  .profile-edit-container textarea {
+    padding: 8px;
+    border: 1px solid #aeaaaa;
+    border-radius: 5px;
+    inline-size: calc(100% - 22px); /* Adjust width for better fit */
+    margin-block-end: 8px; /* Add spacing between inputs */
+    font-size: 16px;
+    color: #333;
+  }
+ 
+  /* Adjust button styling for better appearance */
+  .profile-edit-container button {
+    background-color: #138496; /* Button color similar to the header background */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-block-start: 5px; /* Add spacing above the button */
+  }
+ 
+  /* Change button hover color for consistency */
+  .profile-edit-container button:hover {
+    background-color: #090b0b; /* Hover color similar to the header background */
+  }
+ 
+  .error {
+    color:red;
+    font-weight: bold;
+  }

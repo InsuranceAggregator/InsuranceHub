@@ -1,0 +1,24 @@
+<button class="btn-new" routerLink="/customer"> Post New details</button>
+<table>
+    <thead>
+        <tr>
+              <th>policyNumber</th>
+              <th>type</th>
+              <th>premium</th>
+              <th>status</th>
+              <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.policyNumber}}</td>
+            <td>{{customer.type}}</td>
+            <td>{{customer.premium}}</td>
+            <td>{{customer.status}}</td>
+            <td>
+                <button class="btn-update" routerLink="/customer/{{customer.id}}">Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

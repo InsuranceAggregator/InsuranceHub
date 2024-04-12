@@ -1,0 +1,80 @@
+<div class="home-container">
+  <div class="header">
+    <div>
+      <!-- Logo link here -->
+     <a class="logo-link" routerLink="/homepage">
+       <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+     </a>
+     </div>
+    <div class="dropdown">
+      <button class="profile-btn">Profile</button>
+      <div class="dropdown-content">
+        <!-- Profile dropdown content here -->
+        <!--<a href="register.component.html">View Profile</a>-->
+        <a routerLink="/edit-profile">View & Edit Profile</a>
+        <a href="#">Notifications</a>
+        <a href="#">Change Password</a>
+        <a href="#">Sign out</a>
+        <!-- Add more options as needed -->
+      </div>
+    </div>
+    <div class="search-bar">
+      <form action="/data-display" method="GET">
+       
+         <button (click)="navigateToDataDisplay()">Search</button>
+      </form>
+    </div>
+    <!-- <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button class="search-btn">Search</button>
+    </div> -->
+    <div class="actions">
+      <div class="dropdown">
+        <button class="dropbtn">Policies</button>
+        <div class="dropdown-content">
+          <!-- Policies dropdown content here -->
+          <!--<div class="nested-dropdown">
+              <a href="#">Health Insurance</a>
+             
+          </div>
+          <div class="nested-dropdown">
+            <a routerLink="/healthInsurance">Life Insurance</a>
+             
+          </div>-->
+          <div class="nested-dropdown">
+            <a (click)="navigateToHomeInsurance()">Home Insurance</a>
+            </div>
+          <div class="nested-dropdown">
+               <a href="#">Vehicle Insurance</a>
+               
+          </div>
+          
+        </div>
+      </div>
+      
+  
+      <div class="dropdown">
+        <button class="dropbtn">Claims</button>
+        <div class="dropdown-content">
+          <!-- Claims dropdown content here -->
+          <a href="#">File a new claim</a>
+          <a href="#">Existing filed claim</a>
+          <a href="#">Track the filed claim</a>
+          <!-- Add more claims as needed -->
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" (click)="navigateTocontactus()">Support</button>
+        
+       
+      </div>
+    </div>
+  </div>
+  <h1>We provide you the best Insurance</h1>
+  <h2>Secure the future, protect what's important</h2>
+ 
+  <footer>
+    <p>&copy; 2024 InsuraNexus. All rights reserved.</p>
+  </footer>
+  <!-- Add any other relevant content, such as featured insurance plans, testimonials, etc. -->
+</div>
