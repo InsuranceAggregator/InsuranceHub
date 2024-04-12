@@ -29,16 +29,27 @@ public class UserController {
     public UserController(RegistrationService registrationService) {
         this.registrationService = registrationService;
     }
- 
     @PostMapping("/register")
-    public ResponseEntity<String> createUser(@RequestBody RegistrationDTO registrationDTO) {
-        try {
-            registrationService.createUser(registrationDTO);
-            return new ResponseEntity<>("User Registration Successful", HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>("User Registration failed: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
+    public ResponseEntity<?> createUser( @RequestBody RegistrationDTO registrationDTO){
+       try {
+          if (registrationService.existsByEmail( registrationDTO.getEmail())) {
+             return new ResponseEntity<>("Email ID already exists", HttpStatus.CONFLICT);
+          }
+          RegistrationDTO createdRegistrationDTO = registrationService.createUser(registrationDTO);
+          return new ResponseEntity<>("User Registration Successful", HttpStatus.CREATED);
+       }catch (Exception e) {
+          return new ResponseEntity<>("User Registration is failed" + e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+       }}
+ 
+//    @PostMapping("/register")
+//    public ResponseEntity<String> createUser(@RequestBody RegistrationDTO registrationDTO) {
+//        try {
+//            registrationService.createUser(registrationDTO);
+//            return new ResponseEntity<>("User Registration Successful", HttpStatus.CREATED);
+//        } catch (Exception e) {
+//            return new ResponseEntity<>("User Registration failed: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+    //}
  
     @GetMapping("/registereddetails")
     public ResponseEntity<List<RegistrationDTO>> getAllUsers() {

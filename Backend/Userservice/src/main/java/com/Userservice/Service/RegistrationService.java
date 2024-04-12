@@ -19,6 +19,8 @@ public interface RegistrationService {
  
 	RegistrationDTO createUser(RegistrationDTO registrationDTO);
 
+	boolean existsByEmail(String email);
+
  
  
 }
