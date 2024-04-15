@@ -107,6 +107,6 @@ export class PaymentGatewayComponent {
     @HostListener('window:payment.success', ['$event'])
     onPaymentSuccess(event: { detail: any; }): void {
        console.log(event.detail);
-       this.router.navigate(['/homepage']);
+       this.router.navigate(['/homepage'],{ skipLocationChange: true });
     }
 }

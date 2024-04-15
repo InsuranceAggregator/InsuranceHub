@@ -45,7 +45,7 @@ export class RegisterComponent {
     if (this.submitted && this.form.name && this.form.mobilenumber && this.form.email && this.form.password && this.form.confirmpassword && this.form.password === this.form.confirmpassword) {
       console.log('Form submission successful. User registered successfully:', this.form);
       alert('Registration successful!');
-      this.router.navigate(['/login']); // Redirect to login page after successful registration
+      this.router.navigate(['/login'],{ skipLocationChange: true }); // Redirect to login page after successful registration
       // Send registration data to backend
       this.http.post<any>('http://localhost:8082/api/v/register', {
         name: this.form.name,

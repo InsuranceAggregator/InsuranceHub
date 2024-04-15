@@ -36,7 +36,7 @@ export class LoginComponent {
             if (response.message === 'Login Successful') {
               alert("Login Successful");
               this.userService.setEmail(this.email);
-              this.router.navigate(['/homepage']);
+              this.router.navigate(['/homepage'],{ skipLocationChange: true });
             } 
             
             else if

@@ -14,6 +14,6 @@ export class VehicleBuy2DetailsComponent implements OnInit {
   }
  
   acceptAndProceed(): void {
-    this.router.navigate(['/customer-details']);
+    this.router.navigate(['/customer-details'],{ skipLocationChange: true });
   }
 }
