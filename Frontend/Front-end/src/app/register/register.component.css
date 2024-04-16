@@ -112,3 +112,6 @@ button:hover {
   text-decoration: underline;
   color: blue;
 }
+.error-message {
+  color: red;
+}

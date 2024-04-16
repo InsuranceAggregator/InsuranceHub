@@ -1,5 +1,5 @@
 <!-- register.component.html -->
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +12,10 @@
 <div class="background-image">
 <div class="container">
 <h2>Register</h2>
+ 
+<!-- Display error message if email already exists -->
+ 
+ 
 <form #registerForm="ngForm" (ngSubmit)="register()">
     <!-- For Name Field -->
     <div class="form-group">
@@ -67,6 +71,8 @@
       </div>
     </div>
  
+     <!-- Display error message if email already exists -->
+     <div [ngClass]="{'error-message': emailExists}" class="error-message">{{ errorMessage }}</div>
     <button type="submit" class="btn btn-primary">Register</button>
   </form>
  
