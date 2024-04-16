@@ -29,6 +29,7 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
 import { CustomerSupportComponent } from './customer-support/customer-support.component';
 
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
+import { ActivePoliciesComponent } from './active-policies/active-policies.component';
 const routes: Routes = [
   {
     path: 'password-reset-success',
@@ -58,6 +59,7 @@ const routes: Routes = [
     CustomerDetailsComponent,
     CustomerSupportComponent,
     PaymentGatewayComponent,
+    ActivePoliciesComponent,
   ],
   imports: [
     BrowserModule,
