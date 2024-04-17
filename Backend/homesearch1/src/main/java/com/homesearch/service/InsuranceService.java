@@ -25,7 +25,6 @@ public class InsuranceService {
     public Insurance createPlan(Insurance plan) {
         // Set policy number and policy name before saving
         // Assuming these fields are present in the Insurance entity class
-        plan.setPolicyNumber(plan.getPolicyNumber());
         plan.setPolicyName(plan.getPolicyName());
         return insuranceRepository.save(plan);
     }
