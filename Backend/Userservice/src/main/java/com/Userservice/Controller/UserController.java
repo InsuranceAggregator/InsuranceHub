@@ -16,7 +16,7 @@ import com.Userservice.DTO.RegistrationDTO;
 import com.Userservice.Service.RegistrationService;
 @RestController
 @RequestMapping("/api/v")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="*")
 public class UserController {
     private final RegistrationService registrationService;
     @Autowired
