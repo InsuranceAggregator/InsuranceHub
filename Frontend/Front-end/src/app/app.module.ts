@@ -27,6 +27,9 @@ import { VehicleBuy1DetailsComponent } from './vehicle-buy1-details/vehicle-buy1
 import { VehicleBuy2DetailsComponent } from './vehicle-buy2-details/vehicle-buy2-details.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerSupportComponent } from './customer-support/customer-support.component';
+
+import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
+import { ActivePoliciesComponent } from './active-policies/active-policies.component';
 const routes: Routes = [
   {
     path: 'password-reset-success',
@@ -55,6 +58,8 @@ const routes: Routes = [
     VehicleBuy2DetailsComponent,
     CustomerDetailsComponent,
     CustomerSupportComponent,
+    PaymentGatewayComponent,
+    ActivePoliciesComponent,
   ],
   imports: [
     BrowserModule,

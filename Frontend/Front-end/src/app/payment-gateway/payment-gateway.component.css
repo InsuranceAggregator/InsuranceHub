@@ -1,0 +1,106 @@
+/* Custom CSS for styling the form */
+.header {
+    background-color: lilac;
+    padding: 10px;
+    display: flex;
+    align-items: baseline; /* Align items based on their baseline */
+  }
+ 
+  .logo-link {
+    margin-inline-end: auto; /* Pushes the logo to the left corner */
+  }
+ 
+  /* Adjust the size of the logo */
+  .logo-link img {
+   
+    inline-size: 50px;
+    block-size: auto;
+  }
+ 
+  .heading {
+    color: #138496; /* Change 'blue' to the color of your choice */
+  }
+.background-image-container {
+    background-image: url('../../assets/InsuranceBG.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: -1; /* Ensure the background image stays behind the content */
+  }
+.card-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    /* Centering the card container */
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+  }
+ 
+  .form-group {
+    margin-block-end: 20px;
+  }
+ 
+  label {
+    font-weight: bold;
+  }
+ 
+  input[type="text"],
+  input[type="number"] {
+    inline-size: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+ 
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+ 
+  .alert {
+    margin-block-start: 5px;
+    padding: 8px;
+    border-radius: 5px;
+  }
+ 
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+ 
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+ 
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+ 
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+ 
+  .btn-block {
+    inline-size: 100%;
+  }
+ 
+  /* Add padding to text fields */
+  .form-control {
+    padding-inline-end: 5px;
+  }

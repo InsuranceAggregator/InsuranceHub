@@ -18,6 +18,8 @@ import { VehicleBuy1DetailsComponent } from './vehicle-buy1-details/vehicle-buy1
 import { VehicleBuy2DetailsComponent } from './vehicle-buy2-details/vehicle-buy2-details.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerSupportComponent } from './customer-support/customer-support.component';
+import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
+import { ActivePoliciesComponent } from './active-policies/active-policies.component';
 
 
 
@@ -42,7 +44,9 @@ const routes: Routes = [
   { path: 'vehicle-buy1', component: VehicleBuy1DetailsComponent},
   { path: 'vehicle-buy2', component: VehicleBuy2DetailsComponent},
   { path: 'customer-details', component: CustomerDetailsComponent},
-  { path: 'customer-support', component: CustomerSupportComponent }
+  { path: 'customer-support', component: CustomerSupportComponent },
+  { path: 'paymentGateway', component: PaymentGatewayComponent},
+  { path: 'activepolicies', component: ActivePoliciesComponent}
 ];
 
 @NgModule({

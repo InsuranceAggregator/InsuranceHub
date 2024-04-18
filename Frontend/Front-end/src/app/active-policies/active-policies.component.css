@@ -1,0 +1,32 @@
+.active-policies-container {
+    margin-block-start: 30px;
+  }
+  
+  .active-policies-container h1 {
+    margin-block-end: 20px;
+  }
+  
+  .active-policies-container table {
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+  
+  .active-policies-container th, .active-policies-container td {
+    border: 1px solid #dddddd;
+    text-align: start;
+    padding: 8px;
+  }
+  
+  .active-policies-container th {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .active-policies-container tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .active-policies-container tbody tr:hover {
+    background-color: #d4dbd2;
+  }
+  

@@ -33,7 +33,7 @@ export class OtpVerificationComponent  {
           console.log('Email to be passed to PasswordResetSuccessComponent:', this.email); // Add this line
             alert('OTP verification successful');
             // If OTP is valid, navigate to the success page
-            this.router.navigate(['/password-reset/reset-password']) , { queryParams: { email: this.email } };
+            this.router.navigate(['/password-reset/reset-password'],{ skipLocationChange: true }) , { queryParams: { email: this.email } };
           } else {
             // If OTP is invalid, display an error message
             alert('Invalid OTP. Please try again.');

@@ -1,0 +1,28 @@
+<div class="active-policies-container">
+    <h1>Active Policies</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Policy Number</th>
+          <th>Type</th>
+          <th>Premium</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let policy of activePolicies">
+          <td>{{ policy.name }}</td>
+          <td>{{ policy.email }}</td>
+          <td>{{ policy.policyNumber }}</td>
+          <td>{{ policy.type }}</td>
+          <td>{{ policy.premium}}</td>
+          <td>{{ policy.startDate }}</td>
+          <td>{{ policy.endDate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

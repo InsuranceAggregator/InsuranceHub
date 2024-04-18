@@ -21,7 +21,7 @@ export class CustomerDetailsComponent {
         response => {
          
           console.log('Form data submitted successfully:', response);
-          this.router.navigate(['/data-display']);
+          this.router.navigate(['/paymentGateway']);
         },
         error => {
          
