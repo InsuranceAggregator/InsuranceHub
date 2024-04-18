@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener } from '@angular/core';
 import { OrderServiceService } from '../order-service.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserDetailsService } from '../user-details.service';
  
 declare var Razorpay: any;
  
@@ -12,15 +13,20 @@ declare var Razorpay: any;
 })
 export class PaymentGatewayComponent {
 
- 
   form: any = {};
+
   constructor(private http: HttpClient,
-    private orderService:OrderServiceService,private router: Router) {
+    private orderService:OrderServiceService,
+    private router: Router,
+    private userDetailsService: UserDetailsService,
+    private route: ActivatedRoute ) {
  
   }
   ngOnInit() {
-   
- 
+    const formData = history.state.formData;
+    if (formData) {
+      this.form = formData;
+    }
   }
  
   sayHello() {
@@ -96,6 +102,16 @@ export class PaymentGatewayComponent {
           this.error = response.error.reason;
         }
         );
+        rzp1.on('payment.success', (response: any) => {
+          // Handle payment success
+          console.log('Payment success:', response);
+          this.sendFormDataToService(this.form);
+        });
+        rzp2.on('payment.success', (response: any) => {
+          // Handle payment success
+          console.log('Payment success:', response);
+          this.sendFormDataToService(this.form);
+        });
       }
       ,
       err => {
@@ -103,10 +119,22 @@ export class PaymentGatewayComponent {
       }
       );
     }
- 
-    @HostListener('window:payment.success', ['$event'])
-    onPaymentSuccess(event: { detail: any; }): void {
-       console.log(event.detail);
-       this.router.navigate(['/homepage'],{ skipLocationChange: true });
+    
+    sendFormDataToService(formData: any) {
+      this.userDetailsService.submitUserDetails(formData).subscribe(
+        response => {
+          console.log('Success message sent:', response);
+          this.router.navigate(['/homepage'], { skipLocationChange: true });
+        },
+        error => {
+          console.error('Error sending success message:', error);
+        }
+      );
     }
+  
+    @HostListener('window:payment.success', ['$event'])
+  onPaymentSuccess(event: { detail: any; }): void {
+    console.log(event.detail);
+    this.sendFormDataToService(this.form);
+  }
 }

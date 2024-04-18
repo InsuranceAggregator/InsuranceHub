@@ -21,6 +21,5 @@ public interface RegistrationService {
 
 	boolean existsByEmail(String email);
 
- 
- 
+
 }

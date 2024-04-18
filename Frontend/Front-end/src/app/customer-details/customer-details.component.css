@@ -3,11 +3,11 @@ body {
 }
  
 .container {
-    max-width: 600px;
+    max-inline-size: 600px;
     margin: 0 auto;
     padding: 2%;
     box-shadow: 0 0 10px #ae930f;
-    margin-top: 25px; /* Red shadow */
+    margin-block-start: 25px; /* Red shadow */
     background-color: antiquewhite;
 }
  
@@ -17,17 +17,17 @@ h2 {
 }
  
 .form-group {
-    margin-bottom: 2px;
+    margin-block-end: 2px;
 }
  
 label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-block-end: 5px;
 }
  
 input[type="text"], select {
-    width: calc(100% - 12px); /* Adjusted width to accommodate for border and padding */
+    inline-size: calc(100% - 12px); /* Adjusted width to accommodate for border and padding */
     border: 1px solid black;
     border-radius: 5px;
     box-sizing: border-box;
@@ -35,7 +35,7 @@ input[type="text"], select {
     padding: 4px; /* Added padding for select element */
 }
 input[type="number"], select {
-    width: calc(100% - 12px); /* Adjusted width to accommodate for border and padding */
+    inline-size: calc(100% - 12px); /* Adjusted width to accommodate for border and padding */
     border: 1px solid black;
     border-radius: 5px;
     box-sizing: border-box;
@@ -50,7 +50,7 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-block-start: 10px;
 }
  
 input[type="submit"]:hover {
@@ -59,7 +59,7 @@ input[type="submit"]:hover {
  
 .inline-group {
     display: inline-block;
-    width: 49.4%;
+    inline-size: 49.4%;
     vertical-align: top;
 }
 .error {

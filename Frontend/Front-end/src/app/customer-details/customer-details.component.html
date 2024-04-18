@@ -35,11 +35,7 @@
                 <div class="error" *ngIf="submitted && form.controls['gender'].errors?.['required']">Gender is required.</div>
             </div>
         </div>
-        <div class="form-group">
-            <label for="phone">Policy Number:</label>
-            <input type="text" id="policyNumber" name="policyNumber" [(ngModel)]="form.value.policyNumber" required>
-                <div class="error" *ngIf="submitted && form.controls['policyNumber'].errors?.['required']">Policy number is required.</div>
-            </div>
+        
         <div class="form-group">
             <label for="policyType">Policy Type:</label>
             <select id="policyType" name="policyType" [(ngModel)]="form.value.policyType" required>
@@ -51,6 +47,21 @@
             </select>
             <div class="error" *ngIf="submitted && form.controls['policyType'].errors?.['required']">Policy type is required.</div>
         </div>
+        <div class="form-group">
+                <!-- Start Date -->
+                <div class="inline-group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" name="startDate" [(ngModel)]="startDate" required>
+                    <div class="error" *ngIf="submitted && form.controls['startDate'].errors?.['required']">Start Date is required.</div>
+                </div>
+        
+                <!-- End Date -->
+                <div class="inline-group">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" name="endDate" [(ngModel)]="endDate" required>
+                    <div class="error" *ngIf="submitted && form.controls['endDate'].errors?.['required']">End Date is required.</div>
+                </div>
+            </div>        
         <div class="form-group">
             <label for="premium">Premium:</label>
             <input type="number" id="premium" name="premium" [(ngModel)]="form.value.premium" required>

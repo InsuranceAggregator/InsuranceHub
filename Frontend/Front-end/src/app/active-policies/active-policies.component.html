@@ -1,4 +1,13 @@
+<div class="background-image-container">
 <div class="active-policies-container">
+    <div class="header">
+        <div>
+            <!-- Logo link here -->
+           <a class="logo-link" routerLink="/homepage">
+             <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+           </a>
+        </div>
+    </div>
     <h1>Active Policies</h1>
     <table>
       <thead>
@@ -17,7 +26,7 @@
           <td>{{ policy.name }}</td>
           <td>{{ policy.email }}</td>
           <td>{{ policy.policyNumber }}</td>
-          <td>{{ policy.type }}</td>
+          <td>{{ policy.policyType }}</td>
           <td>{{ policy.premium}}</td>
           <td>{{ policy.startDate }}</td>
           <td>{{ policy.endDate }}</td>
@@ -25,4 +34,4 @@
       </tbody>
     </table>
   </div>
-  
+</div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common'; // Import DatePipe
 
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -70,7 +71,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule],
-  providers: [UserService,provideClientHydration(),PasswordResetService],
+  providers: [UserService,provideClientHydration(),PasswordResetService,DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

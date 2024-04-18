@@ -1,3 +1,40 @@
+.header {
+    background-color: lilac;
+    padding: 10px;
+    display: flex;
+    align-items: baseline; /* Align items based on their baseline */
+  }
+ 
+  .logo-link {
+    margin-inline-end: auto; /* Pushes the logo to the left corner */
+  }
+ 
+  /* Adjust the size of the logo */
+  .logo-link img {
+   
+    inline-size: 50px;
+    block-size: auto;
+  }
+ 
+  .heading {
+    color: #138496; /* Change 'blue' to the color of your choice */
+  }
+  .background-image-container {
+    background-image: url('../../assets/InsuranceBG.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: -1; /* Ensure the background image stays behind the content */
+  }
+  .active-policies-container h1 {
+    color: black; 
+    text-align: center; 
+}
+  
 .active-policies-container {
     margin-block-start: 30px;
   }
@@ -22,11 +59,12 @@
     color: white;
   }
   
-  .active-policies-container tbody tr:nth-child(even) {
+  .active-policies-container tbody tr {
     background-color: #f2f2f2;
-  }
-  
-  .active-policies-container tbody tr:hover {
+}
+
+.active-policies-container tbody tr:hover {
     background-color: #d4dbd2;
-  }
+}
+
   
