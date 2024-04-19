@@ -31,6 +31,7 @@ import { CustomerSupportComponent } from './customer-support/customer-support.co
 
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import { ActivePoliciesComponent } from './active-policies/active-policies.component';
+import { ClaimFormComponent } from './claim-form/claim-form.component';
 const routes: Routes = [
   {
     path: 'password-reset-success',
@@ -61,6 +62,7 @@ const routes: Routes = [
     CustomerSupportComponent,
     PaymentGatewayComponent,
     ActivePoliciesComponent,
+    ClaimFormComponent,
   ],
   imports: [
     BrowserModule,
