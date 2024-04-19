@@ -63,9 +63,9 @@
                 </div>
             </div>        
         <div class="form-group">
-            <label for="premium">Premium:</label>
-            <input type="number" id="premium" name="premium" [(ngModel)]="form.value.premium" required>
-                <div class="error" *ngIf="submitted && form.controls['premium'].errors?.['required']">Premium is required.</div>
+            <label for="amount">Premium:</label>
+            <input type="number" id="amount" name="amount" [(ngModel)]="form.value.amount" required>
+                <div class="error" *ngIf="submitted && form.controls['amount'].errors?.['required']">Premium is required.</div>
             </div>
         <input type="submit" value="Submit">
     </form>

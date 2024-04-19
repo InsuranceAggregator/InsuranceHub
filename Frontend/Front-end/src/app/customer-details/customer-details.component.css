@@ -65,5 +65,5 @@ input[type="submit"]:hover {
 .error {
     color: red;
     font-size: 13px;
-    margin-top: 5px; /* Adjust margin as needed */
+    margin-block-start: 5px; /* Adjust margin as needed */
   }
