@@ -1,0 +1,26 @@
+<form [formGroup]="claimForm" (ngSubmit)="onSubmit()" class="claim-form-container">
+    <div>
+      <label for="claimantName">Claimant Name:</label>
+      <input type="text" id="claimantName" formControlName="claimantName">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+    </div>
+    <div>
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" formControlName="phoneNumber">
+    </div>
+    <div>
+      <label for="policyNumber">Policy Number:</label>
+      <select id="policyNumber" formControlName="policyNumber">
+        <option *ngFor="let policyNumber of policyNumbers" [value]="policyNumber">{{ policyNumber }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="description">Description of Claim:</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+    <button type="submit">Submit Claim</button>
+  </form>
+  

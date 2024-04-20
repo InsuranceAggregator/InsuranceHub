@@ -1,0 +1,67 @@
+/* Style for the form container */
+.claim-form-container {
+    max-inline-size: 600px; /* Adjusted from 400px */
+    margin: 0 auto;
+    padding: 2%;
+    box-shadow: 0 0 10px #ae930f;
+    margin-block-start: 25px; /* Red shadow */
+    background-color: antiquewhite;
+  }
+  
+  /* Style for form labels */
+  .claim-form-container label {
+    display: block;
+    font-weight: bold; /* Added font-weight */
+    margin-block-end: 5px;
+  }
+  
+  /* Style for form inputs */
+  .claim-form-container input[type="text"],
+  .claim-form-container input[type="email"],
+  .claim-form-container textarea {
+    inline-size: calc(100% - 12px); /* Adjusted width to accommodate for border and padding */
+    padding: 10px; /* Adjusted padding */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-block-end: 16px; /* Adjusted margin */
+  }
+  
+  /* Style for select dropdown */
+/* Style for select dropdown */
+.claim-form-container select {
+    inline-size: calc(100% - 16px); /* Adjusted width to accommodate for border and padding */
+    padding: 10px; /* Adjusted padding */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-block-end: 16px; /* Adjusted margin */
+  }
+  
+  
+  /* Style for submit button */
+  .claim-form-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    inline-size: 100%;
+  }
+  
+  /* Style for submit button when disabled */
+  .claim-form-container button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Style for form validation error messages */
+  .claim-form-container .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
