@@ -21,6 +21,7 @@ import { CustomerSupportComponent } from './customer-support/customer-support.co
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import { ActivePoliciesComponent } from './active-policies/active-policies.component';
 import { ClaimFormComponent } from './claim-form/claim-form.component';
+import { ExistingClaimsComponent } from './existing-claims/existing-claims.component';
 
 
 
@@ -48,7 +49,8 @@ const routes: Routes = [
   { path: 'customer-support', component: CustomerSupportComponent },
   { path: 'paymentGateway', component: PaymentGatewayComponent},
   { path: 'activepolicies', component: ActivePoliciesComponent},
-  { path: 'claim-form', component: ClaimFormComponent}
+  { path: 'claim-form', component: ClaimFormComponent},
+  { path: 'existing-claims', component: ExistingClaimsComponent}
 ];
 
 @NgModule({
