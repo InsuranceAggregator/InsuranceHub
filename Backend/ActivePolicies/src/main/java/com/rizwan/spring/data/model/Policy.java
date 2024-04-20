@@ -23,14 +23,14 @@ public class Policy {
     private String gender;
     private String policyNumber;
     private String policyType;
-    private double premium;
+    private double amount;
     private LocalDate startDate;
     private LocalDate endDate;
     // Constructors
     public Policy() {
     }
 	public Policy(Long id, String name, String email, String mobileNumber, int age, String gender, String policyNumber,
-			String policyType, double premium, LocalDate startDate, LocalDate endDate) {
+			String policyType, double amount, LocalDate startDate, LocalDate endDate) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -40,7 +40,7 @@ public class Policy {
 		this.gender = gender;
 		this.policyNumber = policyNumber;
 		this.policyType = policyType;
-		this.premium = premium;
+		this.amount = amount;
 		this.startDate = startDate;
 		this.endDate = endDate;
 	}
@@ -92,11 +92,11 @@ public class Policy {
 	public void setPolicyType(String policyType) {
 		this.policyType = policyType;
 	}
-	public double getPremium() {
-		return premium;
+	public double getAmount() {
+		return amount;
 	}
-	public void setPremium(double premium) {
-		this.premium = premium;
+	public void setAmount(double amount) {
+		this.amount = amount;
 	}
 	public LocalDate getStartDate() {
 		return startDate;
@@ -114,7 +114,8 @@ public class Policy {
 	public String toString() {
 		return "Policy [id=" + id + ", name=" + name + ", email=" + email + ", mobileNumber=" + mobileNumber + ", age="
 				+ age + ", gender=" + gender + ", policyNumber=" + policyNumber + ", policyType=" + policyType
-				+ ", premium=" + premium + ", startDate=" + startDate + ", endDate=" + endDate + "]";
+				+ ", amount=" + amount + ", startDate=" + startDate + ", endDate=" + endDate + "]";
 	}
+    
 }
    
