@@ -1,28 +1,49 @@
+.header {
+  background-color: lilac;
+  padding: 10px;
+  display: flex;
+  align-items: baseline; /* Align items based on their baseline */
+}
+
+.logo-link {
+  margin-inline-end: auto; /* Pushes the logo to the left corner */
+}
+
+/* Adjust the size of the logo */
+.logo-link img {
+ 
+  inline-size: 50px;
+  block-size: auto;
+}
+
+.heading {
+  color: #138496; /* Change 'blue' to the color of your choice */
+}
 .policy-container {    
     background-color: antiquewhite;
     position: fixed;
-    height: 100%;
+    block-size: 100%;
 }
   h2 {
     text-align: center;
     color:blue;
-    margin-bottom: 20px ;
+    margin-block-end: 20px ;
   }
   .policy-name {
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-block-end: 20px;
     font-size:20px ;
   }
   .policy-details {
-    width: 80%; /* Adjust width as needed */
+    inline-size: 80%; /* Adjust width as needed */
     padding: 20px;
-    margin-bottom: 20px;
+    margin-block-end: 20px;
     align-items: center;
    
    
   }
   .description {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
     text-align: justify;
   }
   h3 {
@@ -30,21 +51,21 @@
   }
   .policy-type {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-block-end: 10px;
   }
    
   .premium-amount {
-    margin-bottom: 10px;
+    margin-block-end: 10px;
     font-weight: bold;
   }
   .benefits {
-    margin-bottom: 10px;
+    margin-block-end: 10px;
   }
    
    
   .accept-and-proceed {
-    margin-left: 25px;
-    margin-top: 20px;
+    margin-inline-start: 25px;
+    margin-block-start: 20px;
   }
    
   .accept-and-proceed button {
