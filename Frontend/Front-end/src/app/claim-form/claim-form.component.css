@@ -1,11 +1,45 @@
-/* Style for the form container */
+
+.header {
+    background-color: lilac;
+    padding: 10px;
+    display: flex;
+    align-items: baseline; /* Align items based on their baseline */
+  }
+ 
+  .logo-link {
+    margin-inline-end: auto; /* Pushes the logo to the left corner */
+  }
+ 
+  /* Adjust the size of the logo */
+  .logo-link img {
+   
+    inline-size: 50px;
+    block-size: auto;
+  }
+ 
+  .heading {
+    color: #138496; /* Change 'blue' to the color of your choice */
+  }
+
+  .background-image-container {
+    background-image: url('../../assets/InsuranceBG.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: -1; /* Ensure the background image stays behind the content */
+  }
+
 .claim-form-container {
     max-inline-size: 600px; /* Adjusted from 400px */
     margin: 0 auto;
-    padding: 2%;
-    box-shadow: 0 0 10px #ae930f;
+    padding: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     margin-block-start: 25px; /* Red shadow */
-    background-color: antiquewhite;
+    background-color: #f0f0f0; 
   }
   
   /* Style for form labels */

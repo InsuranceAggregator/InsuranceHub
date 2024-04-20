@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../user.service'; // Import UserService
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-claim-form',
@@ -15,6 +16,7 @@ export class ClaimFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private httpClient: HttpClient,
+    private router: Router,
     private userService: UserService // Inject UserService
   ) {}
 
@@ -50,6 +52,7 @@ export class ClaimFormComponent implements OnInit {
                 alert('Claim submitted successfully!');
                 // Reset the form
                 this.claimForm.reset();
+                this.router.navigate(['/homepage'], { skipLocationChange: true });
             }, error => {
                 console.error(error);
                 // Handle error response

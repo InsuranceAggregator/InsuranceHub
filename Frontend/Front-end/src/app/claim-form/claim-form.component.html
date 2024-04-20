@@ -1,3 +1,12 @@
+<div class="background-image-container">
+<div class="header">
+    <div>
+      <!-- Logo link here -->
+      <a class="logo-link" routerLink="/homepage">
+        <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+      </a>
+    </div>
+  </div>
 <form [formGroup]="claimForm" (ngSubmit)="onSubmit()" class="claim-form-container">
     <div>
       <label for="claimantName">Claimant Name:</label>
@@ -23,4 +32,4 @@
     </div>
     <button type="submit">Submit Claim</button>
   </form>
-  
+</div>
