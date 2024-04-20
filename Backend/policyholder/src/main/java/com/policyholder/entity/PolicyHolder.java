@@ -19,7 +19,7 @@ public class PolicyHolder {
     private String gender;
     private String policyNumber; // Policy number will be generated automatically
     private String policyType;
-    private double premium;
+    private double amount;
     private LocalDate startDate;
     private LocalDate endDate;
 
@@ -30,114 +30,137 @@ public class PolicyHolder {
         this.policyNumber = generatePolicyNumber();
     }
 
-    // Constructor with all fields
-
+    
     public PolicyHolder(Long id, String name, String email, String mobileNumber, int age, String gender,
-                        String policyType, double premium, LocalDate startDate, LocalDate endDate) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.mobileNumber = mobileNumber;
-        this.age = age;
-        this.gender = gender;
-        this.policyNumber = generatePolicyNumber(); // Ensure policy number is always generated automatically
-        this.policyType = policyType;
-        this.premium = premium;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
+			 String policyType, double amount, LocalDate startDate, LocalDate endDate) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.mobileNumber = mobileNumber;
+		this.age = age;
+		this.gender = gender;
+		this.policyNumber = generatePolicyNumber(); // Ensure policy number is always generated automatically
+		this.policyType = policyType;
+		this.amount = amount;
+		this.startDate = startDate;
+		this.endDate = endDate;
+	}
+    
 
-    // Getters and setters...
+	// Generate a policy number with "P" followed by four random digits
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public String getName() {
-        return name;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public String getEmail() {
-        return email;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
-    public String getMobileNumber() {
-        return mobileNumber;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
-    }
 
-    public int getAge() {
-        return age;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
-    public String getGender() {
-        return gender;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 
-    public String getPolicyNumber() {
-        return policyNumber;
-    }
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
 
-    // Setter for policyNumber is omitted to ensure it's generated automatically
 
-    public String getPolicyType() {
-        return policyType;
-    }
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
 
-    public void setPolicyType(String policyType) {
-        this.policyType = policyType;
-    }
 
-    public double getPremium() {
-        return premium;
-    }
+	public int getAge() {
+		return age;
+	}
 
-    public void setPremium(double premium) {
-        this.premium = premium;
-    }
 
-    public LocalDate getStartDate() {
-        return startDate;
-    }
+	public void setAge(int age) {
+		this.age = age;
+	}
 
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
-    }
 
-    public LocalDate getEndDate() {
-        return endDate;
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
-    }
 
-    // Generate a policy number with "P" followed by four random digits
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
-    private String generatePolicyNumber() {
+
+	public String getPolicyNumber() {
+		return policyNumber;
+	}
+
+
+	public void setPolicyNumber(String policyNumber) {
+		this.policyNumber = policyNumber;
+	}
+
+
+	public String getPolicyType() {
+		return policyType;
+	}
+
+
+	public void setPolicyType(String policyType) {
+		this.policyType = policyType;
+	}
+
+
+	public double getAmount() {
+		return amount;
+	}
+
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+
+
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+
+
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+
+
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
+	}
+
+
+	private String generatePolicyNumber() {
         String prefix = "P";
         String digits = generateRandomDigits(4);
         return prefix + digits;

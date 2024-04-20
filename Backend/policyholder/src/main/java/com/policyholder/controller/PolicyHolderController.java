@@ -80,5 +80,9 @@ public class PolicyHolderController {
         policyHolderService.deletePolicyHolder(id);
 
     }
+    @GetMapping("/{email}/policies")
+    public List<String> getPolicyNumbersByEmail(@PathVariable String email) {
+        return policyHolderService.getPolicyNumbersByEmail(email);
+    }
 
 }
