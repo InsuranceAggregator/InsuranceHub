@@ -1,0 +1,37 @@
+<div class="background-image-container">
+    <div class="existing-claims-container">
+        <div class="header">
+            <div>
+                <!-- Logo link here -->
+               <a class="logo-link" routerLink="/homepage">
+                 <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+               </a>
+            </div>
+        </div>
+        <h1>Filed Claims</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Claimant Name</th>
+              <th>Email</th>
+              <th>Claim Number</th>
+              <th>Policy Number</th>
+              <th>Phone Number</th>
+              <th>Description</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let existingClaim of existingClaims">
+              <td>{{ existingClaim.claimantName }}</td>
+              <td>{{ existingClaim.email }}</td>
+              <td>{{ existingClaim.claimNumber }}</td>
+              <td>{{ existingClaim.policyNumber }}</td>
+              <td>{{ existingClaim.phoneNumber }}</td>
+              <td>{{ existingClaim.description }}</td>
+              <td>{{ existingClaim.status }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
