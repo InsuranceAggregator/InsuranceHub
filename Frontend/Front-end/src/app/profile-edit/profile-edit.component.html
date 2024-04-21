@@ -35,10 +35,11 @@
       </div>
       <div class="form-field">
         <label for="description">Description:</label>
-        <textarea id="description" name="description" [(ngModel)]="profile.description" minlength="100" maxlength="500" required></textarea>
+        <textarea id="description" name="description" [(ngModel)]="profile.description" minlength="5" maxlength="100" required></textarea>
         <div *ngIf="editProfileForm.controls['description'].invalid && (editProfileForm.controls['description'].dirty || editProfileForm.controls['description'].touched)">
-          <div *ngIf="editProfileForm.controls['description'].errors?.['minlength']" style="color: red;">Description must be at least 100 characters long.</div>
-          <div *ngIf="editProfileForm.controls['description'].errors?.['maxlength']" style="color: red;">Description cannot exceed 500 characters.</div>
+          <div *ngIf="editProfileForm.controls['description'].errors?.['required']" style="color: red;">Description is required.</div>
+          <div *ngIf="editProfileForm.controls['description'].errors?.['minlength']" style="color: red;">Description must be at least 5 characters long.</div>
+          <div *ngIf="editProfileForm.controls['description'].errors?.['maxlength']" style="color: red;">Description cannot exceed 100 characters.</div>
         </div>
       </div>
       <button type="submit" [disabled]="editProfileForm.invalid">Save Changes</button>
