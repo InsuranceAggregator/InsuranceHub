@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class InsuranceService {
 
-  private baseUrl = 'http://localhost:8100/insurance'; // Update with your backend URL
+  private baseUrl = 'http://localhost:8092/insurance'; // Update with your backend URL
 
   constructor(private http: HttpClient) { }
 

@@ -40,9 +40,9 @@ import { AdminSupportComponent } from './admin-support/admin-support.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { LandingpageComponent } from './landing-page/landing-page.component';
 import { AdminClaimComponent } from './admin-claim/admin-claim.component';
-import { PolicyListComponent } from './policy-list/policy-list.component';
+import { GetPolicyComponent } from './get-policy/get-policy.component';
 import { AddPolicyComponent } from './add-policy/add-policy.component';
-import { UpdatePolicyComponent } from './update-policy/update-policy.component';
+
 const routes: Routes = [
   {
     path: 'password-reset-success',
@@ -81,9 +81,8 @@ const routes: Routes = [
     UserDetailsComponent,
     LandingpageComponent,
     AdminClaimComponent,
-    PolicyListComponent,
+    GetPolicyComponent,
     AddPolicyComponent,
-    UpdatePolicyComponent,
   ],
   imports: [
     BrowserModule,

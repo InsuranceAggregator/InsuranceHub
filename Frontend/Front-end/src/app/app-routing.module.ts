@@ -28,7 +28,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminSupportComponent } from './admin-support/admin-support.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AdminClaimComponent } from './admin-claim/admin-claim.component';
-import { PolicyListComponent } from './policy-list/policy-list.component';
+import { GetPolicyComponent } from './get-policy/get-policy.component';
+import { AddPolicyComponent } from './add-policy/add-policy.component';
 
 
 
@@ -64,7 +65,8 @@ const routes: Routes = [
   { path: 'admin-support', component: AdminSupportComponent},
   { path: 'user-details', component: UserDetailsComponent},
   { path: 'admin-claim', component: AdminClaimComponent},
-  { path: 'policy-list', component: PolicyListComponent}
+  { path: 'get-policy', component: GetPolicyComponent},
+  { path: 'add-policy', component: AddPolicyComponent}
 ];
 
 @NgModule({

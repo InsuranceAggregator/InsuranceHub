@@ -28,7 +28,7 @@ export class AdminDashboardComponent implements OnInit {
   }
   
   navigateToInsurance() {
-    this.router.navigate(['/policy-list']);
+    this.router.navigate(['/get-policy']);
   }
   
   navigateToUserDetails() {

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { InsuranceService } from '../insurance.service';
 
 @Component({
-  selector: 'app-policy-list',
-  templateUrl: './policy-list.component.html',
-  styleUrls: ['./policy-list.component.scss']
+  selector: 'app-get-policy',
+  templateUrl: './get-policy.component.html',
+  styleUrls: ['./get-policy.component.css']
 })
-export class PolicyListComponent implements OnInit {
+export class GetPolicyComponent implements OnInit {
 
   policies: any[] = [];
 
@@ -21,7 +21,7 @@ export class PolicyListComponent implements OnInit {
     .subscribe(data => {
       this.policies = data;
     }, error => {
-      console.error('Error loading policies:', error);
+      console.error('Error loading active policies:', error);
     });
   }
 
@@ -30,8 +30,11 @@ export class PolicyListComponent implements OnInit {
   }
 
   deletePolicy(id: number): void {
-    this.insuranceService.deletePolicy(id).subscribe(() => {
+    this.insuranceService.deletePolicy(id)
+    .subscribe(() => {
       this.loadPolicies();
+    }, error => {
+      console.error('Error loading', error);
     });
   }
 }

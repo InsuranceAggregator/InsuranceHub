@@ -4,131 +4,78 @@
     flex-direction: column;
     align-items: center;
 }
-
+ 
 /* Button Styles */
 .btn-new {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-
     padding: 10px 20px;
-
     text-align: center;
-
     text-decoration: none;
-
     display: inline-block;
-
     font-size: 16px;
-
     margin-block-end: 20px; /* Add margin at the bottom */
-
     cursor: pointer;
-
     border-radius: 5px;
-
 }
  
 /* Table Styles */
-
 table {
-
     inline-size: 100%;
-
     border-collapse: collapse;
-
     border-radius: 5px; /* Add border radius */
-
     overflow: hidden; /* Hide overflow content */
-
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
-
     margin-block-end: 20px; /* Add margin at the bottom */
-
 }
  
 th, td {
-
     border: 1px solid #ddd;
-
     padding: 8px;
-
     text-align: start;
-
 }
  
 th {
-
     background-color: #f2f2f2;
-
 }
  
 tr:nth-child(even) {
-
     background-color: #f2f2f2;
-
 }
  
 /* Update Button Styles */
-
 .btn-update {
-
     background-color: #007bff; /* Blue */
-
     border: none;
-
     color: white;
-
     padding: 10px 20px;
-
     text-align: center;
-
     text-decoration: none;
-
     display: inline-block;
-
     font-size: 16px;
-
     cursor: pointer;
-
     border-radius: 5px;
-
 }
  
 .btn-update:hover {
-
     background-color: #0056b3; /* Darker blue on hover */
-
 }
  
 /* Delete Button Styles */
-
 .btn-delete {
-
     background-color: #dc3545; /* Red */
-
     border: none;
-
     color: white;
-
     padding: 10px 20px;
-
     text-align: center;
-
     text-decoration: none;
-
     display: inline-block;
-
     font-size: 16px;
-
     cursor: pointer;
-
     border-radius: 5px;
-
 }
  
 .btn-delete:hover {
-
     background-color: #c82333; /* Darker red on hover */
-
 }
