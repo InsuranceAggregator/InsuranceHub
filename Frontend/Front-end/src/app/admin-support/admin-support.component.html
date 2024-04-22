@@ -1,0 +1,29 @@
+<div class="admin-support-container">
+    <h1>User Support Details</h1>
+  
+    <!-- Displaying Support Messages in Table Format -->
+    <table class="message-table">
+        <thead>
+            <tr>
+                <th>Contact ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Message</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let message of contactMessages">
+                <td>{{ message.id }}</td>
+                <td>{{ message.name }}</td>
+                <td>{{ message.email }}</td>
+                <td>{{ message.phoneNumber }}</td>
+                <td>{{ message.message }}</td>
+                <td>
+                    <button *ngIf="message.id !== undefined" (click)="deleteMessage(message.id)">Resolve</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

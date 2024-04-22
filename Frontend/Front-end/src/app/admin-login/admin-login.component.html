@@ -1,0 +1,27 @@
+<body class="background-image">
+    <div class="login-container">
+      <h2>Admin Login</h2>
+      <form class="login-form" (ngSubmit)="OnLogin()">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" [(ngModel)]="loginObj.email" name="email" placeholder="Enter your email" id="email"required>
+         
+           
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" [(ngModel)]="loginObj.password" name="password" placeholder="Enter Password"  id="password" required>
+          
+          
+        </div>
+        <div class="form-group">
+          <div class="container">
+            <!-- <button type="submit" class="btn btn-primary">Login</button> -->
+            <button type="button" class="btn btn-primary" (click)="OnLogin()">Login</button>
+          </div> 
+        </div>
+      </form>
+      
+    </div>
+  </body>
+   

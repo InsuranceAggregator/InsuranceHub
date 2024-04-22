@@ -86,6 +86,13 @@ public class Insurance {
 	public void setPolicyType(String policyType) {
 		this.policyType = policyType;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Insurance [id=" + id + ", policyName=" + policyName + ", description=" + description + ", premium="
+				+ premium + ", policyType=" + policyType + "]";
+	}
     
    
 

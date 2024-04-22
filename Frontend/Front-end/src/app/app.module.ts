@@ -16,6 +16,7 @@ import { GetAllCustomersComponent } from './components/get-all-customers/get-all
 
 import { UpdateCustomersComponent } from './components/update-customers/update-customers.component';
 import { UserService } from './user.service';
+import { UserDataService } from './user-data.service'
 import { PolicyDetailsComponent } from './policy-details/policy-details.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { OtpVerificationComponent } from './otp-verification/otp-verification.component';
@@ -33,6 +34,15 @@ import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.compo
 import { ActivePoliciesComponent } from './active-policies/active-policies.component';
 import { ClaimFormComponent } from './claim-form/claim-form.component';
 import { ExistingClaimsComponent } from './existing-claims/existing-claims.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminSupportComponent } from './admin-support/admin-support.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { LandingpageComponent } from './landing-page/landing-page.component';
+import { AdminClaimComponent } from './admin-claim/admin-claim.component';
+import { PolicyListComponent } from './policy-list/policy-list.component';
+import { AddPolicyComponent } from './add-policy/add-policy.component';
+import { UpdatePolicyComponent } from './update-policy/update-policy.component';
 const routes: Routes = [
   {
     path: 'password-reset-success',
@@ -65,6 +75,15 @@ const routes: Routes = [
     ActivePoliciesComponent,
     ClaimFormComponent,
     ExistingClaimsComponent,
+    AdminDashboardComponent,
+    AdminLoginComponent,
+    AdminSupportComponent,
+    UserDetailsComponent,
+    LandingpageComponent,
+    AdminClaimComponent,
+    PolicyListComponent,
+    AddPolicyComponent,
+    UpdatePolicyComponent,
   ],
   imports: [
     BrowserModule,

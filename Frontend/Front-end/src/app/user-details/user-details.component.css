@@ -1,0 +1,56 @@
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-inline-end: 10px;
+  }
+  
+  button, .search-btn {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  table {
+    margin-block-start: 30px;
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: start;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #04AA6D;
+    color: white; /* Added for better visibility */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #d4dbd2;
+  }
+  
+  footer {
+    background-color: lilac;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    inset-block-end: 0;
+    inline-size: 100%;
+  }
+  

@@ -6,4 +6,6 @@ import com.rizwan.spring.data.model.ExistingClaim;
 
 public interface ExistingClaimRepository extends JpaRepository<ExistingClaim, Long> {
 	List<ExistingClaim> findByEmail(String email);
+	List<ExistingClaim> findByClaimNumber(String claimNumber);
+
 }

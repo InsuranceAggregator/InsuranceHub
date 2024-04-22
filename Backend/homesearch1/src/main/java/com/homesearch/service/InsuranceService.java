@@ -33,22 +33,26 @@ public class InsuranceService {
         return insuranceRepository.findById(id).orElse(null);
     }
  
+ 
+    public void deletePlan(Long id) {
+        insuranceRepository.deleteById(id);
+    }
+ 
     public Insurance updatePlan(Long id, Insurance planDetails) {
         // Check if the plan exists
         Insurance existingPlan = insuranceRepository.findById(id).orElse(null);
         if (existingPlan != null) {
             // Update plan details
             existingPlan.setPolicyName(planDetails.getPolicyName());
-            // Set other fields as needed
+            existingPlan.setDescription(planDetails.getDescription());
+            existingPlan.setPremium(planDetails.getPremium());
+            existingPlan.setPolicyType(planDetails.getPolicyType());
+            // Save the updated plan
             return insuranceRepository.save(existingPlan);
         }
         return null; // Return null if the plan doesn't exist
     }
- 
-    public void deletePlan(Long id) {
-        insuranceRepository.deleteById(id);
-    }
- 
+
     // Method to search plans by policy name
     public List<Insurance> searchPlansByPolicyName(String policyName) {
         return insuranceRepository.findByPolicyName(policyName);

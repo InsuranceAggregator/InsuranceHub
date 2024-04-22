@@ -22,12 +22,19 @@ import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.compo
 import { ActivePoliciesComponent } from './active-policies/active-policies.component';
 import { ClaimFormComponent } from './claim-form/claim-form.component';
 import { ExistingClaimsComponent } from './existing-claims/existing-claims.component';
+import { LandingpageComponent } from './landing-page/landing-page.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminSupportComponent } from './admin-support/admin-support.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { AdminClaimComponent } from './admin-claim/admin-claim.component';
+import { PolicyListComponent } from './policy-list/policy-list.component';
 
 
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent }, // Define your login component route
   { path: 'homepage', component: HomepageComponent },
@@ -50,7 +57,14 @@ const routes: Routes = [
   { path: 'paymentGateway', component: PaymentGatewayComponent},
   { path: 'activepolicies', component: ActivePoliciesComponent},
   { path: 'claim-form', component: ClaimFormComponent},
-  { path: 'existing-claims', component: ExistingClaimsComponent}
+  { path: 'existing-claims', component: ExistingClaimsComponent},
+  { path: 'landing-page', component: LandingpageComponent},
+  { path: 'admin-login', component: AdminLoginComponent},
+  { path: 'admin-dashboard', component: AdminDashboardComponent},
+  { path: 'admin-support', component: AdminSupportComponent},
+  { path: 'user-details', component: UserDetailsComponent},
+  { path: 'admin-claim', component: AdminClaimComponent},
+  { path: 'policy-list', component: PolicyListComponent}
 ];
 
 @NgModule({

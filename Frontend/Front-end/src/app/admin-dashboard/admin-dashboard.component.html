@@ -1,0 +1,41 @@
+<div class="home-container">
+    <div class="header">
+      <div>
+        <!-- Admin Logo link here -->
+        <a class="logo-link" [routerLink]="['/admin-dashboard']">
+          <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+        </a>
+      </div>
+    
+      <div class="actions">
+        <div class="dropdown">
+    
+          <button class="dropbtn" (click)="navigateToUserDetails()">User Details</button>
+        
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><i class="fa fa-file"></i>Policies</button>
+          <div class="dropdown-content">
+            <a (click)="navigateToInsurance()">Insurance</a>
+  </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" (click)="navigateToAdminContactUs()">Support</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn" (click)="navigateToAdminClaim()">Claims</button>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn" (click)="logout()">Sign Out</button>
+        </div>
+      </div>
+    </div>
+    <h1>Welcome Admin</h1>
+    <h2>Manage the InsuraNexus system efficiently</h2>
+    <footer>
+      <p>&copy; 2024 InsuraNexus Admin. All rights reserved.</p>
+    </footer>
+  </div>
+  

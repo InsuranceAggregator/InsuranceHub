@@ -4,7 +4,8 @@ package com.homesearch.controller;
 import java.util.List;
  
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.homesearch.entity.Insurance;
@@ -52,13 +53,16 @@ public class InsuranceController {
     }
  
     @PutMapping("/plans/{id}")
-
-    public Insurance updatePlan(@PathVariable Long id, @RequestBody Insurance planDetails) {
-
-        return insuranceService.updatePlan(id, planDetails);
-
+    public ResponseEntity<Insurance> updatePlan(@PathVariable Long id, @RequestBody Insurance planDetails) {
+        Insurance updatedPlan = insuranceService.updatePlan(id, planDetails);
+        if (updatedPlan != null) {
+            return new ResponseEntity<>(updatedPlan, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
- 
+
+    
     @DeleteMapping("/plans/{id}")
 
     public void deletePlan(@PathVariable Long id) {

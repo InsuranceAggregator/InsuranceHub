@@ -1,0 +1,44 @@
+.admin-support-container {
+    margin-block-start: 20px;
+}
+
+.message-table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* White background for the table */
+    border: 1px solid #4caf50; /* Changed to match button color */
+}
+
+.message-table th, .message-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: start;
+}
+
+.message-table th {
+    background-color: #4caf50; /* Changed to match button color */
+    color: white; /* White text color for header */
+}
+
+.message-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+.message-table tbody tr:hover {
+    background-color: #d4dbd2; /* Light background on hover */
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-inline-start:10px;
+    transition: background-color 0.3s ease;
+    background-color: #4caf50; /* Changed to match table header color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #28a745; /* Changed to match .search-btn color */
+}

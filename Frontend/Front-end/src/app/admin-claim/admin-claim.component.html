@@ -1,0 +1,58 @@
+<div class="background-image-container">
+    <div class="existing-claims-container">
+      <div class="header">
+        <div>
+          <!-- Logo link here -->
+          <a class="logo-link" [routerLink]="['/admin-dashboard']">
+            <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+          </a>
+        </div>
+      </div>
+      <h1>Filed Claims</h1>
+      <div *ngFor="let existingClaim of existingClaims">
+        <form (ngSubmit)="submitForm(existingClaim.claimNumber)">
+          <div class="claim-form">
+            <div>
+              <label>Claimant Name:</label>
+              <span>{{ existingClaim.claimantName }}</span>
+            </div>
+            <div>
+              <label>Email:</label>
+              <span>{{ existingClaim.email }}</span>
+            </div>
+            <div>
+              <label>Claim Number:</label>
+              <span>{{ existingClaim.claimNumber }}</span>
+            </div>
+            <div>
+              <label>Policy Number:</label>
+              <span>{{ existingClaim.policyNumber }}</span>
+            </div>
+            <div>
+              <label>Phone Number:</label>
+              <span>{{ existingClaim.phoneNumber }}</span>
+            </div>
+            <div>
+              <label>Description:</label>
+              <span>{{ existingClaim.description }}</span>
+            </div>
+            <div class="status-change-container">
+                <div>
+                  <label>Status:</label>
+                  <select [(ngModel)]="existingClaim.status" name="status">
+                    <option value="pending">Pending</option>
+                    <option value="processing">Processing</option>
+                    <option value="approved">Approved</option>
+                    <option value="denied">Denied</option>
+                  </select>
+                </div>
+                <div>
+                  <button type="submit">Change Status</button>
+                </div>
+              </div>
+              
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

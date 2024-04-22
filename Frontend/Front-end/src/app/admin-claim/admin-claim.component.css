@@ -1,0 +1,105 @@
+/* Header styling */
+.header {
+    background-color: lilac;
+    padding: 10px;
+    display: flex;
+    align-items: baseline; /* Align items based on their baseline */
+  }
+  
+  .logo-link {
+    margin-inline-end: auto; /* Pushes the logo to the left corner */
+  }
+  
+  /* Adjust the size of the logo */
+  .logo-link img {
+    inline-size: 50px;
+    block-size: auto;
+  }
+  
+  /* Heading styling */
+  .heading {
+    color: #138496; /* Change 'blue' to the color of your choice */
+  }
+  
+  /* Background image container styling */
+  .background-image-container {
+    background-image: url('../../assets/InsuranceBG.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: -1; /* Ensure the background image stays behind the content */
+    max-block-size: 100vh; /* Set maximum height for the container */
+    overflow-y: auto; /* Add vertical scrollbar */
+  }
+  
+  /* Container for existing claims */
+  .existing-claims-container {
+    margin-block-start: 30px;
+  }
+  
+  /* Form styling for each existing claim */
+  .claim-form {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    margin-block-end: 20px;
+    background-color: #f2f2f2;
+  }
+  
+  /* Label styling */
+  .claim-form label {
+    font-weight: bold;
+  }
+  
+  /* Span styling */
+  .claim-form span {
+    margin-inline-start: 10px;
+  }
+
+  /* Center the h1 tag horizontally */
+.existing-claims-container h1 {
+    color: black;
+    text-align: center;
+    margin-block-start: 0; /* Remove default margin */
+  }
+  /* Button styling */
+  .status-change-container {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .status-change-container > div {
+    margin-inline-end: 10px; /* Add spacing between the two divs */
+  }
+  
+  /* Dropdown styling */
+  .status-change-container select {
+    border-radius: 4px; /* Add curves to dropdown corners */
+    padding: 6px; /* Adjust padding */
+  }
+  
+  /* Button styling */
+  .status-change-container button {
+    background-color: green; /* Set button background color to green */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 8px 16px; /* Adjust padding */
+    cursor: pointer; /* Add pointer cursor on hover */
+    border-radius: 4px; /* Add curves to button corners */
+  }
+  
+  /* Adjust hover effect for the button */
+  .status-change-container button:hover {
+    opacity: 0.8; /* Reduce opacity on hover for visual feedback */
+  }
+  
+  
+  /* Dropdown styling */
+  .claim-form select {
+    border-radius: 4px; /* Add curves to dropdown corners */
+    padding: 6px; /* Adjust padding */
+  }
+  

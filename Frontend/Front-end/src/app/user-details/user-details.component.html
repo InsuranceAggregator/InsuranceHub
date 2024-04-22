@@ -1,0 +1,27 @@
+<div class="admin-user-container">
+    <h1>User Details</h1>
+
+    <!-- Displaying User Details in Table Format -->
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <!-- <th>Action</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.mobilenumber }}</td>
+                <!-- <td>
+                    <button (click)="viewUserDetails(user.id)">View</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
