@@ -77,8 +77,8 @@
   
   /* Dropdown styling */
   .status-change-container select {
-    border-radius: 4px; /* Add curves to dropdown corners */
-    padding: 6px; /* Adjust padding */
+    border-radius: 20px; /* Add curves to dropdown corners */
+    padding: 5px; /* Adjust padding */
   }
   
   /* Button styling */
@@ -88,7 +88,7 @@
     border: none; /* Remove border */
     padding: 8px 16px; /* Adjust padding */
     cursor: pointer; /* Add pointer cursor on hover */
-    border-radius: 4px; /* Add curves to button corners */
+    border-radius: 20px; /* Add curves to button corners */
   }
   
   /* Adjust hover effect for the button */
@@ -100,6 +100,6 @@
   /* Dropdown styling */
   .claim-form select {
     border-radius: 4px; /* Add curves to dropdown corners */
-    padding: 6px; /* Adjust padding */
+    padding: 4px; /* Adjust padding */
   }
   

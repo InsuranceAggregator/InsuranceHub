@@ -1,5 +1,17 @@
+<div class="background-image-container">
 <div class="policy-list-container">
-    <button class="btn-new" routerLink="/add-policy">Post New details</button>
+    <div class="header">
+        <div>
+            <!-- Logo link here -->
+           <a class="logo-link" routerLink="/admin-dashboard">
+             <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+           </a>
+        </div>
+        <div class="button-container">
+            <button class="btn-new" routerLink="/add-policy">Post New details</button>
+        </div>
+    </div>
+    
     <table>
     <thead>
     <tr>
@@ -19,10 +31,11 @@
     <td>{{ policy.premium }}</td>
     <td>{{ policy.policyType }}</td>
     <td>
-    <button class="policy-button" (click)="updatePolicy(policy)">Update</button>
-    <button class="policy-button" (click)="deletePolicy(policy.id)">Delete</button>
+    <button class="btn-update" (click)="updatePolicy(policy)">Update</button>
+    <button class="btn-delete" (click)="deletePolicy(policy.id)">Delete</button>
     </td>
     </tr>
     </tbody>
     </table>
     </div>
+</div>

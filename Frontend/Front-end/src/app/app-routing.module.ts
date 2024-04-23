@@ -30,6 +30,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { AdminClaimComponent } from './admin-claim/admin-claim.component';
 import { GetPolicyComponent } from './get-policy/get-policy.component';
 import { AddPolicyComponent } from './add-policy/add-policy.component';
+import { UpdatePolicyComponent } from './update-policy/update-policy.component';
 
 
 
@@ -66,7 +67,8 @@ const routes: Routes = [
   { path: 'user-details', component: UserDetailsComponent},
   { path: 'admin-claim', component: AdminClaimComponent},
   { path: 'get-policy', component: GetPolicyComponent},
-  { path: 'add-policy', component: AddPolicyComponent}
+  { path: 'add-policy', component: AddPolicyComponent},
+  { path: 'update-policy/:id', component: UpdatePolicyComponent}
 ];
 
 @NgModule({

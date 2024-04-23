@@ -1,4 +1,43 @@
 /* Container for button and table */
+.header {
+    background-color: lilac;
+    padding: 10px;
+    display: flex;
+    align-items: baseline; /* Align items based on their baseline */
+    justify-content: space-between; /* Space out items evenly */
+  }
+ 
+  .logo-link {
+    margin-inline-end: auto; /* Pushes the logo to the left corner */
+  }
+ 
+  /* Adjust the size of the logo */
+  .logo-link img {
+   
+    inline-size: 50px;
+    block-size: auto;
+  }
+  .button-container {
+    /* Align the button to the top right corner */
+    margin-inline-start: auto; /* Pushes the button to the right corner */
+}
+
+  .heading {
+    color: #138496; /* Change 'blue' to the color of your choice */
+  }
+  .background-image-container {
+    background-image: url('../../assets/InsuranceBG.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    z-index: -1; /* Ensure the background image stays behind the content */
+    max-block-size: 100vh; /* Set maximum height for the container */
+    overflow-y: auto; /* Add vertical scrollbar */
+  }
 .container {
     display: flex;
     flex-direction: column;
@@ -42,20 +81,24 @@ th {
  
 tr:nth-child(even) {
     background-color: #f2f2f2;
-}
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
  
 /* Update Button Styles */
 .btn-update {
     background-color: #007bff; /* Blue */
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
 }
  
 .btn-update:hover {
@@ -67,13 +110,13 @@ tr:nth-child(even) {
     background-color: #dc3545; /* Red */
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
 }
  
 .btn-delete:hover {

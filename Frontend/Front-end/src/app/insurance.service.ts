@@ -26,4 +26,8 @@ export class InsuranceService {
   deletePolicy(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/plans/${id}`);
   }
+
+  getPolicyById(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/plans/${id}`);
+  }
 }

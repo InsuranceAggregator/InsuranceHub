@@ -1,3 +1,4 @@
+/* Form container */
 .header {
     background-color: lilac;
     padding: 10px;
@@ -40,10 +41,12 @@ form {
     background-color: #f9f9f9;
 }
 
+/* Labels */
 label {
     font-weight: bold;
 }
 
+/* Form input fields */
 input[type="text"],
 input[type="number"],
 textarea,
@@ -56,6 +59,7 @@ select {
     border-radius: 4px;
 }
 
+/* Submit button */
 button[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -66,6 +70,7 @@ button[type="submit"] {
     cursor: pointer;
 }
 
+/* Hover effect on submit button */
 button[type="submit"]:hover {
     background-color: #45a049;
 }

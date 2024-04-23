@@ -9,20 +9,16 @@
     </div>
 <form (submit)="submitForm()">
     <label for="policyName">Policy Name:</label><br>
-    <select id="policyName" name="policyName" [(ngModel)]="policyName">
-        <option value="Home insurance">Home Insurance</option>
-        <option value="Vehicle insurance">Vehicle Insurance</option>
-        <!-- Add more options as needed -->
-    </select><br>
+    <input type="text" id="policyName" name="policyName" [(ngModel)]="policy.policyName"><br>
 
     <label for="description">Description:</label><br>
-    <textarea id="description" name="description" [(ngModel)]="description"></textarea><br>
+    <textarea id="description" name="description" [(ngModel)]="policy.description"></textarea><br>
 
     <label for="premium">Premium:</label><br>
-    <input type="number" id="premium" name="premium" [(ngModel)]="premium"><br>
+    <input type="number" id="premium" name="premium" [(ngModel)]="policy.premium"><br>
 
     <label for="policyType">Policy Type:</label><br>
-    <input type="text" id="policyType" name="policyType" [(ngModel)]="policyType"><br>
+    <input type="text" id="policyType" name="policyType" [(ngModel)]="policy.policyType"><br>
 
     <button type="submit">Submit</button>
 </form>

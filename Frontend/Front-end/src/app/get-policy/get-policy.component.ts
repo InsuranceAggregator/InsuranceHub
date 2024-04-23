@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InsuranceService } from '../insurance.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-policy',
@@ -10,7 +11,8 @@ export class GetPolicyComponent implements OnInit {
 
   policies: any[] = [];
 
-  constructor(private insuranceService: InsuranceService) { }
+
+  constructor(private insuranceService: InsuranceService, private router: Router) { }
 
   ngOnInit(): void {
     this.loadPolicies();
@@ -26,7 +28,9 @@ export class GetPolicyComponent implements OnInit {
   }
 
   updatePolicy(policy: any): void {
+    const policyId = policy.id;
     // Implement logic to navigate to update policy component with policy data
+    this.router.navigate(['/update-policy/',policyId]);
   }
 
   deletePolicy(id: number): void {

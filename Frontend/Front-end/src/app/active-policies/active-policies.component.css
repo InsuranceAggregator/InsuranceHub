@@ -29,6 +29,8 @@
     inline-size: 100%;
     block-size: 100%;
     z-index: -1; /* Ensure the background image stays behind the content */
+    max-block-size: 100vh; /* Set maximum height for the container */
+    overflow-y: auto; /* Add vertical scrollbar */
   }
   .active-policies-container h1 {
     color: black; 

@@ -1,7 +1,15 @@
+<div class="background-image-container">
 <div class="admin-user-container">
+    <div class="header">
+        <div>
+            <!-- Logo link here -->
+           <a class="logo-link" routerLink="/admin-dashboard">
+             <img src="assets/InsuraNexus.png" alt="InsuraNexus Logo">
+           </a>
+        </div>
+    </div>
     <h1>User Details</h1>
 
-    <!-- Displaying User Details in Table Format -->
     <table class="user-table">
         <thead>
             <tr>
@@ -9,7 +17,6 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Mobile Number</th>
-                <!-- <th>Action</th> -->
             </tr>
         </thead>
         <tbody>
@@ -18,10 +25,8 @@
                 <td>{{ user.name }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.mobilenumber }}</td>
-                <!-- <td>
-                    <button (click)="viewUserDetails(user.id)">View</button>
-                </td> -->
             </tr>
         </tbody>
     </table>
+</div>
 </div>

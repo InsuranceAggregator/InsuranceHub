@@ -42,6 +42,8 @@ body {
     inline-size: 100%;
     block-size: 100%;
     z-index: -1; /* Ensure the background image stays behind the content */
+    max-block-size: 100vh; /* Set maximum height for the container */
+    overflow-y: auto; /* Add vertical scrollbar */
 }
 
 h2 {
@@ -97,6 +99,7 @@ input[type="submit"]:hover {
 }
 .error {
     color: red;
+    font-weight: bold;
     font-size: 13px;
     margin-block-start: 5px; /* Adjust margin as needed */
   }

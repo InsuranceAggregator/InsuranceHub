@@ -42,6 +42,7 @@ import { LandingpageComponent } from './landing-page/landing-page.component';
 import { AdminClaimComponent } from './admin-claim/admin-claim.component';
 import { GetPolicyComponent } from './get-policy/get-policy.component';
 import { AddPolicyComponent } from './add-policy/add-policy.component';
+import { UpdatePolicyComponent } from './update-policy/update-policy.component';
 
 const routes: Routes = [
   {
@@ -83,6 +84,7 @@ const routes: Routes = [
     AdminClaimComponent,
     GetPolicyComponent,
     AddPolicyComponent,
+    UpdatePolicyComponent,
   ],
   imports: [
     BrowserModule,
