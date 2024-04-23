@@ -19,7 +19,7 @@ import com.insurance.abcd.service.ProfileService;
 @Controller
 @RestController
 @RequestMapping("/profiles")
-@CrossOrigin("*")
+
 public class ProfileController {
 
 	    private final ProfileService profileService;

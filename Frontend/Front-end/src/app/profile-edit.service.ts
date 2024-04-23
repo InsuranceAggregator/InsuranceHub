@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 
 export class ProfileEditService {
 
-  private baseUrl = 'http://localhost:8084/profiles/';
+  private baseUrl = 'http://localhost:8760/edit-profile/profiles/';
  
   constructor(private http: HttpClient) { }
  

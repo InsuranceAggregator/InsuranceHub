@@ -16,7 +16,7 @@ export class OrderServiceService {
   }
  
   createOrder(order: { name: any; email: any; phone: any; amount: any; }): Observable<any> {
-    return this.http.post("http://localhost:8088/pg/createOrder", {
+    return this.http.post("http://localhost:8760/paymentgateway/pg/createOrder", {
     customerName: order.name,
     email: order.email,
     phoneNumber: order.phone,

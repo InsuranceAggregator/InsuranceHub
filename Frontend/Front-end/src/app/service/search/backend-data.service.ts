@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
  
 export class BackendDataService {
  
-  private apiUrl = 'http://localhost:8092/insurance/plans';
+  private apiUrl = 'http://localhost:8760/homesearch1/insurance/plans';
  
   constructor(private http: HttpClient) { }
  

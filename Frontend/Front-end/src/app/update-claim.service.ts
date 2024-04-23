@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UpdateClaimService {
 
-  private baseUrl = 'http://localhost:8100/claims/';
+  private baseUrl = 'http://localhost:8760/existingclaim/claims/';
 
   constructor(private http: HttpClient) { }
 

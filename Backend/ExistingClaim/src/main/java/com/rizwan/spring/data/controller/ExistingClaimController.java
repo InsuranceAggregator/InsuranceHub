@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/claims")
-@CrossOrigin(origins="http://localhost:4200")
+
 public class ExistingClaimController {
 
     @Autowired

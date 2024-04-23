@@ -17,7 +17,7 @@ export class EmailResolver implements Resolve<string> {
 @Injectable({ providedIn: 'root' })
 export class PasswordResetService {
  private resetEmail: string = '';
- private resetPasswordUrl = 'http://localhost:8080/api/reset-password';
+ private resetPasswordUrl = 'http://localhost:8760/forgotpassword/api/reset-password';
   constructor(private http: HttpClient) { }
  
   setResetEmail(email: string) {

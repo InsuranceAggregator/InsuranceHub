@@ -15,7 +15,7 @@ import com.homesearch.service.InsuranceService;
 @RestController
 
 @RequestMapping("/insurance")
-@CrossOrigin("*")
+
 public class InsuranceController {
  
     private final InsuranceService insuranceService;

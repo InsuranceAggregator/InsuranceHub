@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PolicyService {
-  private baseUrl = 'http://localhost:8096/policies/';
+  private baseUrl = 'http://localhost:8760/activepolicies/policies/';
 
   constructor(private http: HttpClient) { }
 

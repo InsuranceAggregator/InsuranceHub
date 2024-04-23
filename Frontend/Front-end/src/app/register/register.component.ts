@@ -38,7 +38,7 @@ export class RegisterComponent {
     if (this.submitted && this.form.name && this.form.mobilenumber && this.form.email && this.form.password && this.form.confirmpassword && this.form.password === this.form.confirmpassword) {
       console.log('Form submission successful. User registered successfully:', this.form);
       // Send registration data to backend
-      this.http.post<any>('http://localhost:8082/api/v/register', {
+      this.http.post<any>('http://localhost:8760/userservice/api/v/register', {
         name: this.form.name,
         mobilenumber: this.form.mobilenumber,
         email: this.form.email,

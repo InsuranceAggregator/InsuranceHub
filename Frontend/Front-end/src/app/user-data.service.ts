@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class UserDataService {
 
-  private baseUrl = 'http://localhost:8082/api/v';
+  private baseUrl = 'http://localhost:8760/userservice/api/v';
 
   private httpOptions = {
     headers: new HttpHeaders({

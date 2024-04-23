@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  private baseUrl = 'http://localhost:8094/api/contacts'; // Adjusted backend URL
+  private baseUrl = 'http://localhost:8760/contactus/api/contacts'; // Adjusted backend URL
  
   constructor(private http: HttpClient) { }
  

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const BASIC_URL = ["http://localhost:8086"]; // Corrected BASIC_URL as string
+const BASIC_URL = ["http://localhost:8760/homeinsuranceplan"]; // Corrected BASIC_URL as string
 
 @Injectable({
   providedIn: 'root'

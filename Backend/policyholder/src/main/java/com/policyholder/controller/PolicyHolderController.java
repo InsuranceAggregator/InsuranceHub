@@ -31,7 +31,6 @@ import com.policyholder.service.PolicyHolderService;
 
 @RequestMapping("/policyholders")
 
-@CrossOrigin(origins="http://localhost:4200")
 
 public class PolicyHolderController {
 

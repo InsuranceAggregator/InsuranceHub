@@ -20,7 +20,7 @@ import com.rizwan.spring.data.entity.ResetPassword;
 import com.rizwan.spring.data.service.ResetPasswordService;
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:4200") // Allow requests from Angular frontend
+
 public class ResetPasswordController {
 	@Autowired
 	private ResetPasswordService passwordService;

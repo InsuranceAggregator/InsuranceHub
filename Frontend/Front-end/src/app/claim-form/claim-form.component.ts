@@ -36,7 +36,7 @@ export class ClaimFormComponent implements OnInit {
   fetchPolicyNumbers() {
     const userEmail = this.userService.getEmail(); // Get user's email from UserService
     // Make HTTP request to fetch policy numbers based on user's email
-    this.httpClient.get<any[]>('http://localhost:8090/policyholders/' + userEmail + '/policies')
+    this.httpClient.get<any[]>('http://localhost:8760/policyholder/policyholders/' + userEmail + '/policies')
       .subscribe(response => {
         this.policyNumbers = response; // Assign fetched policy numbers to the array
       }, error => {
@@ -45,7 +45,7 @@ export class ClaimFormComponent implements OnInit {
   }
   onSubmit() {
     if (this.claimForm.valid) {
-        this.httpClient.post<any>('http://localhost:8098/claims', this.claimForm.value)
+        this.httpClient.post<any>('http://localhost:8760/claimform/claims', this.claimForm.value)
             .subscribe(response => {
                 console.log(response);
                 // Display success message to the user

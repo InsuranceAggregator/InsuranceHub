@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 @Validated
 @RestController
 @RequestMapping("/home-insurance/plans")
-@CrossOrigin(origins="http://localhost:4200")
+
 public class HomeInsuranceController {
  
     private final HomeInsurancePlanService homeInsurancePlanService;
