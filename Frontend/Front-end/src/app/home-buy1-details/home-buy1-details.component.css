@@ -23,6 +23,8 @@
     background-color: antiquewhite;
     position: fixed;
     block-size: 100%;
+    max-block-size: 100vh; /* Set maximum height for the container */
+    overflow-y: auto; /* Add vertical scrollbar */
 }
   h2 {
     text-align: center;
